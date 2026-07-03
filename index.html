@@ -1,13 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dr. Mohammad Lutful Hakim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Mohammad Lutful Hakim</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin:0;
+    font-family: 'Inter', sans-serif;
+    background:#0b1220;
+    color:white;
+}
+
+.container {
+    max-width:1100px;
+    margin:auto;
+    padding:40px;
+}
+
+/* HERO */
+.hero {
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1 {
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero h3 {
+    color:#9ca3af;
+    font-weight:400;
+}
+
+.badge {
+    display:inline-block;
+    margin-top:10px;
+    padding:6px 12px;
+    background:#2563eb;
+    border-radius:20px;
+    font-size:13px;
+}
+
+/* BUTTONS */
+.btn {
+    display:inline-block;
+    margin:10px;
+    padding:10px 18px;
+    background:#1f2937;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+.btn:hover {
+    background:#374151;
+}
+
+/* SECTIONS */
+.section {
+    margin-top:60px;
+}
+
+h2 {
+    border-left:4px solid #3b82f6;
+    padding-left:10px;
+}
+
+/* GRID */
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.card {
+    background:#111827;
+    padding:20px;
+    border-radius:12px;
+}
+</style>
+
 </head>
-<body style="font-family:Arial;text-align:center;margin-top:80px;">
-  
-  <h1>Dr. Mohammad Lutful Hakim</h1>
-  <h3>Assistant Professor | Researcher</h3>
-  <p>Stanford Top 2% Scientist | Metamaterials | FSS | AI</p>
+
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Dr. Mohammad Lutful Hakim</h1>
+    <h3>Assistant Professor | Researcher | AI & Metamaterials</h3>
+    
+    <div class="badge">⭐ Top 2% Scientist (Stanford–Elsevier)</div>
+    
+    <div style="margin-top:20px;">
+        <a class="btn" href="#">Google Scholar</a>
+        <a class="btn" href="#">Download CV</a>
+        <a class="btn" href="mailto:your@email.com">Contact</a>
+    </div>
+</div>
+
+<!-- RESEARCH -->
+<div class="section">
+<h2>Research Areas</h2>
+
+<div class="grid">
+<div class="card">Metamaterials</div>
+<div class="card">Frequency Selective Surfaces (FSS)</div>
+<div class="card">Microwave & THz Sensors</div>
+<div class="card">Antenna Design</div>
+<div class="card">Machine Learning in EM</div>
+</div>
+</div>
+
+<!-- PUBLICATIONS -->
+<div class="section">
+<h2>Selected Publications</h2>
+
+<div class="grid">
+<div class="card">Q1 Paper - Metamaterial Absorber Sensor</div>
+<div class="card">IEEE Sensors Journal - 2024</div>
+<div class="card">THz Metasurface Design</div>
+</div>
+</div>
+
+<!-- IMPACT -->
+<div class="section">
+<h2>Research Impact</h2>
+
+<div class="grid">
+<div class="card">📄 35+ Q1 Publications</div>
+<div class="card">📊 1200+ Citations</div>
+<div class="card">📈 H-index: 18</div>
+<div class="card">🏆 Top 2% Scientist</div>
+</div>
+</div>
+
+</div>
 
 </body>
 </html>
