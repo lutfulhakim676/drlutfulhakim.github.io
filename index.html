@@ -2,13 +2,11 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">   
+<meta charset="UTF-8">  
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO TITLE -->
 <title>Dr. Mohammad Lutful Hakim | Assistant Professor | Researcher in Metamaterials, FSS & AI</title>
 
-<!-- SEO META -->
 <meta name="description" content="Dr. Mohammad Lutful Hakim is an Assistant Professor and researcher in metamaterials, frequency selective surfaces (FSS), microwave/THz sensors, antenna design, and AI-driven electromagnetic systems. Top 2% Stanford–Elsevier scientist.">
 
 <meta name="keywords" content="Mohammad Lutful Hakim, metamaterials, FSS, microwave sensors, THz sensors, antenna design, AI electromagnetics, RF engineering, Top 2% scientist">
@@ -19,33 +17,35 @@
 
 <link rel="canonical" href="https://drlutfulhakim.com/">
 
-<!-- OPEN GRAPH -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dr. Mohammad Lutful Hakim | Researcher">
 <meta property="og:description" content="Assistant Professor | Metamaterials | FSS | THz Sensors | AI-based EM Design">
 <meta property="og:url" content="https://drlutfulhakim.com">
 
-<!-- TWITTER -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dr. Mohammad Lutful Hakim">
-<meta name="twitter:description" content="Researcher in metamaterials, FSS, THz sensors and AI electromagnetics">
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- STYLE -->
 <style>
 body {
     margin:0;
     font-family: 'Inter', sans-serif;
     background:#0b1220;
     color:white;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+/* IMPORTANT FIX: allow full page scroll */
+html {
+    scroll-behavior:smooth;
 }
 
 .container {
     max-width:1100px;
     margin:auto;
     padding:40px;
+    display:block;
 }
 
 /* HERO */
@@ -88,11 +88,13 @@ body {
     background:#374151;
 }
 
-/* SECTIONS */
+/* SECTIONS FIX */
 .section {
-    margin-top:60px;
+    margin-top:80px;
+    padding-bottom:20px;
 }
 
+/* HEADERS */
 h2 {
     border-left:4px solid #3b82f6;
     padding-left:10px;
@@ -106,10 +108,23 @@ h2 {
     margin-top:20px;
 }
 
+/* CARDS */
 .card {
     background:#111827;
     padding:20px;
     border-radius:12px;
+    min-height:90px;
+}
+
+/* MOBILE FIX */
+@media (max-width:768px) {
+    .hero h1 {
+        font-size:28px;
+    }
+
+    .container {
+        padding:20px;
+    }
 }
 </style>
 
@@ -133,6 +148,8 @@ h2 {
     </div>
 </div>
 
+<hr style="border:0;height:1px;background:#1f2937;margin:60px 0;">
+
 <!-- RESEARCH -->
 <div class="section">
 <h2>Research Areas</h2>
@@ -146,6 +163,8 @@ h2 {
 </div>
 </div>
 
+<hr style="border:0;height:1px;background:#1f2937;margin:60px 0;">
+
 <!-- PUBLICATIONS -->
 <div class="section">
 <h2>Selected Publications</h2>
@@ -156,6 +175,8 @@ h2 {
 <div class="card">THz Metasurface Design</div>
 </div>
 </div>
+
+<hr style="border:0;height:1px;background:#1f2937;margin:60px 0;">
 
 <!-- IMPACT -->
 <div class="section">
