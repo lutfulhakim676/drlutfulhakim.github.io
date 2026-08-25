@@ -27,103 +27,238 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin:0;
-    font-family: 'Inter', sans-serif;
-    background:#0b1220;
-    color:white;
-    overflow-x:hidden;
-    overflow-y:auto;
+* {
+    box-sizing: border-box;
 }
 
-/* IMPORTANT FIX: allow full page scroll */
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #08111f;
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
 .container {
-    max-width:1100px;
-    margin:auto;
-    padding:40px;
-    display:block;
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+/* NAVIGATION */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8, 17, 31, 0.95);
+    border-bottom: 1px solid #1f2937;
+    backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+    max-width: 1180px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
 }
 
 /* HERO */
 .hero {
-    text-align:center;
-    padding:80px 20px;
+    min-height: 82vh;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 0;
 }
 
-.hero h1 {
-    font-size:42px;
-    margin-bottom:10px;
+.hero-photo {
+    text-align: center;
 }
 
-.hero h3 {
-    color:#9ca3af;
-    font-weight:400;
+.hero-photo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #2563eb;
+    box-shadow: 0 0 40px rgba(37, 99, 235, 0.35);
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 0 0 15px;
+}
+
+.hero-content h3 {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.research-line {
+    margin-top: 22px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #cbd5e1;
 }
 
 .badge {
-    display:inline-block;
-    margin-top:10px;
-    padding:6px 12px;
-    background:#2563eb;
-    border-radius:20px;
-    font-size:13px;
+    display: inline-block;
+    margin-top: 22px;
+    padding: 8px 16px;
+    background: #2563eb;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
-/* BUTTONS */
+.hero-summary {
+    max-width: 700px;
+    margin-top: 24px;
+    line-height: 1.8;
+    color: #94a3b8;
+}
+
+.btn-group {
+    margin-top: 28px;
+}
+
 .btn {
-    display:inline-block;
-    margin:10px;
-    padding:10px 18px;
-    background:#1f2937;
-    color:white;
-    border-radius:8px;
-    text-decoration:none;
+    display: inline-block;
+    margin: 8px 8px 8px 0;
+    padding: 11px 18px;
+    background: #1e293b;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid #334155;
 }
 
 .btn:hover {
-    background:#374151;
+    background: #2563eb;
+    border-color: #2563eb;
 }
 
-/* SECTIONS FIX */
+/* SECTIONS */
 .section {
-    margin-top:80px;
-    padding-bottom:20px;
+    padding: 80px 0;
 }
 
-/* HEADERS */
-h2 {
-    border-left:4px solid #3b82f6;
-    padding-left:10px;
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    border-left: 5px solid #3b82f6;
+    padding-left: 14px;
 }
 
-/* GRID */
 .grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    margin-top:20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
 }
 
-/* CARDS */
 .card {
-    background:#111827;
-    padding:20px;
-    border-radius:12px;
-    min-height:90px;
+    background: #111827;
+    border: 1px solid #1f2937;
+    padding: 24px;
+    border-radius: 14px;
+    transition: 0.3s;
 }
 
-/* MOBILE FIX */
-@media (max-width:768px) {
-    .hero h1 {
-        font-size:28px;
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #2563eb;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+/* RESEARCH IMAGE CARDS */
+.research-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+/* IMPACT */
+.impact-number {
+    font-size: 34px;
+    font-weight: 700;
+    color: #60a5fa;
+}
+
+.impact-label {
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+/* FOOTER */
+.footer {
+    border-top: 1px solid #1f2937;
+    padding: 35px 0;
+    text-align: center;
+    color: #64748b;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+    .nav-links {
+        display: none;
     }
 
-    .container {
-        padding:20px;
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-photo img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .research-line,
+    .hero-summary {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 </style>
@@ -132,64 +267,244 @@ h2 {
 
 <body>
 
-<div class="container">
+<!-- NAVIGATION -->
+<div class="navbar">
+    <div class="nav-inner">
+        <a href="#home" class="logo">Dr. Lutful Hakim</a>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Dr. Mohammad Lutful Hakim</h1>
-    <h3>Assistant Professor | Researcher | AI & Metamaterials</h3>
-    
-    <div class="badge">⭐ Top 2% Scientist (Stanford–Elsevier)</div>
-    
-    <div style="margin-top:20px;">
-        <a class="btn" href="https://scholar.google.com/" target="_blank">Google Scholar</a>
-        <a class="btn" href="cv.pdf">Download CV</a>
-        <a class="btn" href="mailto:your@email.com">Contact</a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#impact">Impact</a>
+            <a href="#contact">Contact</a>
+        </div>
     </div>
 </div>
 
-<hr style="border:0;height:1px;background:#1f2937;margin:60px 0;">
+<div class="container">
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-photo">
+        <img src="images/profile.jpg" alt="Dr. Mohammad Lutful Hakim">
+    </div>
+
+    <div class="hero-content">
+
+        <h1>Dr. Mohammad Lutful Hakim</h1>
+
+        <h3>
+            Assistant Professor | Electromagnetics Researcher
+        </h3>
+
+        <div class="research-line">
+            Metamaterials • Frequency Selective Surfaces • Antennas •
+            Microwave & THz Sensors • AI-Driven Electromagnetics
+        </div>
+
+        <div class="badge">
+            ⭐ Stanford–Elsevier World's Top 2% Scientist
+        </div>
+
+        <p class="hero-summary">
+            My research focuses on advanced electromagnetic structures,
+            metamaterials, frequency selective surfaces, antenna systems,
+            microwave and terahertz sensing, and artificial-intelligence-assisted
+            electromagnetic design for next-generation communication, sensing,
+            and electromagnetic shielding applications.
+        </p>
+
+        <div class="btn-group">
+            <a class="btn" href="https://scholar.google.com/" target="_blank">
+                Google Scholar
+            </a>
+
+            <a class="btn" href="#" target="_blank">
+                ORCID
+            </a>
+
+            <a class="btn" href="#" target="_blank">
+                Scopus
+            </a>
+
+            <a class="btn" href="cv.pdf">
+                Download CV
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+    <h2>About Me</h2>
+
+    <div class="card">
+        <p>
+            Dr. Mohammad Lutful Hakim is an academic researcher working in
+            applied electromagnetics, metamaterials, frequency selective
+            surfaces, antennas, microwave and terahertz sensing, and
+            AI-assisted electromagnetic design.
+        </p>
+
+        <p>
+            His research emphasizes compact and high-performance
+            electromagnetic structures for wireless communication,
+            electromagnetic interference shielding, sensing,
+            and next-generation intelligent RF and terahertz systems.
+        </p>
+    </div>
+</section>
 
 <!-- RESEARCH -->
-<div class="section">
-<h2>Research Areas</h2>
+<section class="section" id="research">
+    <h2>Research Areas</h2>
 
-<div class="grid">
-<div class="card">Metamaterials</div>
-<div class="card">Frequency Selective Surfaces (FSS)</div>
-<div class="card">Microwave & THz Sensors</div>
-<div class="card">Antenna Design</div>
-<div class="card">Machine Learning in EM</div>
-</div>
-</div>
+    <div class="grid">
 
-<hr style="border:0;height:1px;background:#1f2937;margin:60px 0;">
+        <div class="card research-card">
+            <img src="images/metamaterial.jpg" alt="Metamaterials">
+            <h3>Metamaterials</h3>
+            <p>
+                Design and analysis of engineered electromagnetic structures
+                with advanced wave manipulation capabilities.
+            </p>
+        </div>
+
+        <div class="card research-card">
+            <img src="images/fss.jpg" alt="Frequency Selective Surfaces">
+            <h3>Frequency Selective Surfaces</h3>
+            <p>
+                Compact and conformal FSS structures for filtering,
+                shielding and antenna applications.
+            </p>
+        </div>
+
+        <div class="card research-card">
+            <img src="images/thz.jpg" alt="THz Sensors">
+            <h3>Microwave & THz Sensors</h3>
+            <p>
+                High-sensitivity electromagnetic sensors for material,
+                biomedical and industrial detection.
+            </p>
+        </div>
+
+        <div class="card research-card">
+            <img src="images/antenna.jpg" alt="Antenna Research">
+            <h3>Antenna Engineering</h3>
+            <p>
+                Advanced antenna and metasurface concepts for modern
+                wireless communication systems.
+            </p>
+        </div>
+
+        <div class="card research-card">
+            <img src="images/ai-em.jpg" alt="AI Electromagnetics">
+            <h3>AI-Driven Electromagnetics</h3>
+            <p>
+                Machine learning and intelligent optimization for
+                electromagnetic structure design and prediction.
+            </p>
+        </div>
+
+    </div>
+</section>
 
 <!-- PUBLICATIONS -->
-<div class="section">
-<h2>Selected Publications</h2>
+<section class="section" id="publications">
+    <h2>Selected Publications</h2>
 
-<div class="grid">
-<div class="card">Q1 Paper - Metamaterial Absorber Sensor</div>
-<div class="card">IEEE Sensors Journal - 2024</div>
-<div class="card">THz Metasurface Design</div>
-</div>
-</div>
+    <div class="grid">
 
-<hr style="border:0;height:1px;background:#1f2937;margin:60px 0;">
+        <div class="card">
+            <h3>Featured Research Paper</h3>
+            <p>
+                Metamaterials, FSS, antennas and advanced electromagnetic
+                engineering research.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Microwave & THz Sensors</h3>
+            <p>
+                Selected research on highly sensitive microwave and
+                terahertz sensing platforms.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>AI-Assisted EM Design</h3>
+            <p>
+                Machine-learning-assisted design and optimization of
+                electromagnetic structures.
+            </p>
+        </div>
+
+    </div>
+</section>
 
 <!-- IMPACT -->
-<div class="section">
-<h2>Research Impact</h2>
+<section class="section" id="impact">
+    <h2>Research Impact</h2>
 
-<div class="grid">
-<div class="card">📄 35+ Q1 Publications</div>
-<div class="card">📊 1200+ Citations</div>
-<div class="card">📈 H-index: 18</div>
-<div class="card">🏆 Top 2% Scientist</div>
-</div>
+    <div class="grid">
+
+        <div class="card">
+            <div class="impact-number">35+</div>
+            <div class="impact-label">Q1 Publications</div>
+        </div>
+
+        <div class="card">
+            <div class="impact-number">1200+</div>
+            <div class="impact-label">Citations</div>
+        </div>
+
+        <div class="card">
+            <div class="impact-number">18</div>
+            <div class="impact-label">H-index</div>
+        </div>
+
+        <div class="card">
+            <div class="impact-number">Top 2%</div>
+            <div class="impact-label">
+                Stanford–Elsevier Scientist
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <h2>Contact & Academic Profiles</h2>
+
+    <div class="card">
+
+        <p>
+            For research collaboration, academic discussion,
+            student supervision, or professional inquiries,
+            please contact me through the links below.
+        </p>
+
+        <div class="btn-group">
+            <a class="btn" href="mailto:your@email.com">Email</a>
+            <a class="btn" href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+            <a class="btn" href="#" target="_blank">ORCID</a>
+            <a class="btn" href="#" target="_blank">Scopus</a>
+            <a class="btn" href="#" target="_blank">LinkedIn</a>
+        </div>
+
+    </div>
+</section>
+
 </div>
 
+<div class="footer">
+    © 2026 Dr. Mohammad Lutful Hakim. All Rights Reserved.
 </div>
 
 </body>
